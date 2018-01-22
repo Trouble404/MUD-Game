@@ -6,7 +6,7 @@
 
 ---
 
-## Ordinary commands 
+## Ordinary commands I 
 *    @create <name<name>> Creates a thing with the specified name. The thing will belong to you and be placed in your inventory. By default it will have it’s home set to your home. 
 *    @descibe <object<player>=descibtion<message><object>> <object> can be a room, thing, player, or direction that is in the same room as you, or in your inventory. Sets the description a player sees when they use the command look <object>. If <object> is here it sets the description for the current room that is displayed when the room is entered. If <object> is me it sets the description for your character. You can only set the description of an object you own. 
 *    @dig <name<name>> Creates a new room with the specified name, and prints the room’s number. 
@@ -25,9 +25,13 @@
 *    look <objective<object>>
 *    read <objective<object>> <object> can be the name of the current room, or a thing, player, or direction within the current room or in your inventory. Prints a description of <object>. If the object name is omitted, then the current room is assumed. 
 *    page <player<object>> Used to inform an active player that you are looking for them. The targeted player will get a message telling them your name and location. 
-*    say <message<object>> Display the <message> with the notification that you said it to other players in the same room. For example, if your player’s name is Betty the other players in the same room will see: ```bash
+*    say <message<object>> Display the <message> with the notification that you said it to other players in the same room. For example, if your player’s name is Betty the other players in the same room will see:
+```bash
 Junming says "<message>"
 ```
+  ---
+  
+## Ordinary commands II  
 *    look <objective<object>>
 *    whisper <player<player>=message<message><object>> <player> is presented with <message> saying that you whispered it. You can only whisper to players in the same room. The other players in the room will normally see the message:
 ```bash
