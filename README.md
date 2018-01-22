@@ -4,6 +4,8 @@
 
 **Available in [main page](https://comp3207-cw1-1718-jz1g17.herokuapp.com/)**
 
+![image](https://github.com/Trouble404/MUD-Game/blob/master/readme_add_pic/main_page.PNG)
+
 ---
 
 ## Preparation
