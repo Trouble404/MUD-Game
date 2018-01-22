@@ -33,6 +33,20 @@ Junming says "<message>"
 ---
 
 ## Ordinary commands II  
+*    @link <direction> = <room number | here | home>
+*    @link <thing> = <room number | here | home>
+*    @link <room> = <room number | here | home>  In the first form links the exit of the current room specified by <direction> to the room specified by <room number> or here or home. The exit must be unlinked, and you must own the target room if its link_ok attribute is not set. If you don’t already own the exit its ownership is transferred to you. The second form sets the home for <thing>. If <thing> is me it sets your home. You must own the object and you must own the target room if its link_ok attribute is not set. The third form sets the dropto; see the Dropto's section below for an explanation of dropto’s. You must own the room that the drop is being set on and you must own the target room if its link_ok attribute is not set. 
+*    @lock <object>object=key<key> Sets a key (another object) for an object. Both the <object> and <key> must be in the current room or in your inventory. here and me are usable for both keys and objects. You need to own the object your are locking. In order to use <object> you must either be the key, or be carrying the key in your inventory, unless the anti_lock is set (see @set), in which case you must not be carrying the key or be the key. 
+*    @name <object> object=name <name> Changes the name of the specified object. This can also be used to specify a new direction list for an exit (see for example @open). 
+*    @ofailure <object> [ object=message<message> ] Without a message argument, clears the others failure message on <object>, otherwise sets it. The others failure message, prefixed by the player’s name, is shown to others when the player fails to use <object>. 
+*    @open <direction> [ direction;other-dir <other-dir> ]* Creates an unlinked exit in the current room in the specified direction(s). You must own the room in which the exit is being created. Once created, you (or any other player) may use the @link command to specify the room to which the exit leads. See also @name. 
+*    @osuccess <object> [ object=message<message> ] Without a message argument, clears the others success message on <object>, otherwise sets it. The others success message, prefixed by the player’s name, is shown to others when the player successfully uses <object>. 
+*    @password <old>old=new<new> Sets a new password; you must specify your old password to verify your identity. 
+*    @set <object>object=flag<flag>
+*    @set <object>object=!flag<flag> Sets (first form) or resets (second form) <flag> on <object>. The current flags are anti_lock, link_ok, and temple. 
+*    @success <object> [ object=message<message> ] Without a message argument, clears the success message on <object>, otherwise sets it. The success message is printed when a player successfully uses <object>. Without <message> it clears the success message. 
+*    @unlink direction  Removes the link on the exit in the specified <direction>. You must own the exit. The exit may then be relinked by any player using the @link command and ownership of the exit transfers to that player. 
+*    @unlock object    Removes the lock on an object. Only the owner can unlock an object. The key does not need to be present to unlock the object. The object needs to be in the same room or in the player's inventory. 
 *    look <objective<object>>
 *    whisper <player<player>=message<message><object>> <player> is presented with <message> saying that you whispered it. You can only whisper to players in the same room. The other players in the room will normally see the message:
 ```bash
@@ -42,37 +56,4 @@ However, occasionally (with a 1 in 10 probability), another player might instead
 ```bash
 You overheard Betty whisper "<message>" to <player>.
 ```
-*    @link <direction> = <room number | here | home>
-*    @link <thing> = <room number | here | home>
-*    @link <room> = <room number | here | home>  In the first form links the exit of the current room specified by <direction> to the room specified by <room number> or here or home. The exit must be unlinked, and you must own the target room if its link_ok attribute is not set. If you don’t already own the exit its ownership is transferred to you. The second form sets the home for <thing>. If <thing> is me it sets your home. You must own the object and you must own the target room if its link_ok attribute is not set. The third form sets the dropto; see the Dropto's section below for an explanation of dropto’s. You must own the room that the drop is being set on and you must own the target room if its link_ok attribute is not set. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
