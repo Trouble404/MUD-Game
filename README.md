@@ -6,6 +6,29 @@
 
 ---
 
+## Preparation
+
+### 1 Setting up
+To run the application you'll need to gather all cloud services credentials and configure them in **example.env** and **app.yaml**.
+
+[node.js](https://nodejs.org/download/)   
+
+### 2 Dependencies installing
+After setting up all the configurations, the first thing is to install all the dependencies. For Python, we used **Pip** to manage all the backend dependencies. For JavaScript, we used **Npm/Yarn** to do the frontend denpendencies management.
+1. Clone the repository
+```bash
+git https://github.com/Trouble404/MUD-Game.git
+```
+2. Open the **MUD-Game** and install all the dependencies. 
+Before you install the python dependencies 
+```bash
+npm install
+node web.js
+```
+  To access the web interface, open a browser and navigate to [http://localhost:5000/](http://localhost:5000/)
+
+3. To deploy this application to heroku server follow the instruction [**here**](https://devcenter.heroku.com/articles/git)
+
 ## Ordinary commands I 
 *    @create <name<name>> Creates a thing with the specified name. The thing will belong to you and be placed in your inventory. By default it will have it’s home set to your home. 
 *    @descibe <object<player>=descibtion<message><object>> <object> can be a room, thing, player, or direction that is in the same room as you, or in your inventory. Sets the description a player sees when they use the command look <object>. If <object> is here it sets the description for the current room that is displayed when the room is entered. If <object> is me it sets the description for your character. You can only set the description of an object you own. 
