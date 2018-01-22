@@ -25,8 +25,7 @@
 *    look <objective<object>>
 *    read <objective<object>> <object> can be the name of the current room, or a thing, player, or direction within the current room or in your inventory. Prints a description of <object>. If the object name is omitted, then the current room is assumed. 
 *    page <player<object>> Used to inform an active player that you are looking for them. The targeted player will get a message telling them your name and location. 
-*    say <message<object>> Display the <message> with the notification that you said it to other players in the same room. For example, if your player’s name is Betty the other players in the same room will see:
-```bash
+*    say <message<object>> Display the <message> with the notification that you said it to other players in the same room. For example, if your player’s name is Betty the other players in the same room will see: ```bash
 Junming says "<message>"
 ```
 *    look <objective<object>>
