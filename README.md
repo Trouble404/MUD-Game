@@ -42,7 +42,9 @@ However, occasionally (with a 1 in 10 probability), another player might instead
 ```bash
 You overheard Betty whisper "<message>" to <player>.
 ```
-  
+*    @link <direction> = <room number | here | home>
+*    @link <thing> = <room number | here | home>
+*    @link <room> = <room number | here | home>  In the first form links the exit of the current room specified by <direction> to the room specified by <room number> or here or home. The exit must be unlinked, and you must own the target room if its link_ok attribute is not set. If you don’t already own the exit its ownership is transferred to you. The second form sets the home for <thing>. If <thing> is me it sets your home. You must own the object and you must own the target room if its link_ok attribute is not set. The third form sets the dropto; see the Dropto's section below for an explanation of dropto’s. You must own the room that the drop is being set on and you must own the target room if its link_ok attribute is not set. 
 
 
 
