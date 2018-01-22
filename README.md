@@ -10,8 +10,8 @@
 *    @create <name<name>> Creates a thing with the specified name. The thing will belong to you and be placed in your inventory. By default it will have it’s home set to your home. 
 *    @descibe <object<player>=descibtion<message><object>> <object> can be a room, thing, player, or direction that is in the same room as you, or in your inventory. Sets the description a player sees when they use the command look <object>. If <object> is here it sets the description for the current room that is displayed when the room is entered. If <object> is me it sets the description for your character. You can only set the description of an object you own. 
 *    @dig <name<name>> Creates a new room with the specified name, and prints the room’s number. 
-*    @create <name<name>>
-*    @create <name<name>>
+*    @failure <object> [ objective=message<message> ] Without a message argument, clears the failure message on <object>, otherwise sets it. The failure message is printed to a player when they unsuccessfully attempt to use the object. 
+*    @find <name<name>> Prints the name and object number of every room, thing, exit, or player that you control whose name (partially) matches <name>.
 *    drop <objective<object>>
 *    throw <objective<object>>
   Drops the specified object. <object> must be a thing. Can only be used on objects you are carrying. If the current room has the temple flag set, the object will return to its home; if the current room has a dropto set, the object will go the the dropto; otherwise, the item will be placed in the current room. If both flags are set, the object will return to its home. 
@@ -29,8 +29,9 @@
 ```bash
 Junming says "<message>"
 ```
-  ---
-  
+
+---
+
 ## Ordinary commands II  
 *    look <objective<object>>
 *    whisper <player<player>=message<message><object>> <player> is presented with <message> saying that you whispered it. You can only whisper to players in the same room. The other players in the room will normally see the message:
